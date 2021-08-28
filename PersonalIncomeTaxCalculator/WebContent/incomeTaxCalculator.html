@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlinePajak --- Personal Income Tax Calculator</title>
+
+    <!-- Configs -->
+    <script type="module" src="app/configs/config.js"></script>
+
+    <!-- Features -->
+    <script type="module" src="app/features/calculateAnnualTaxIncome.js"></script>
+    <script type="module" src="app/features/calculateAnnualTaxableIncome.js"></script>
+
+    <!-- Utils -->
+    <script type="module" src="app/services/util.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="incomeTaxCalculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div style="width: 100%; height: 100%;">
+        <!-- Nav Bar -->
+        <div class="nav-bar">
+            <div class="nav-bar-container" style="margin-top: 15px;">
+                <a href="">
+                    <img width="125" height="35" src="img/main_logo.png" alt="OnlinePajak Logo" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="nav-bar-container" style="margin-bottom: 15px;">
+            <div class="form-card">
+                <div style="padding: 0px 16px;">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center;">
+                        <div class="result-column">
+                            <h6>Annual Income</h6>
+                            <h4 id="annualIncome">-</h4>
+                        </div>
+                        <div class="result-column arithmetic-icon">
+                            <i class="fa fa-minus" style="color: #d8d8d8;"></i>
+                        </div>
+                        <div class="result-column">
+                            <h6>Tax Relief</h6>
+                            <h4 id="taxRelief">-</h4>
+                        </div>
+                        <div class="result-column arithmetic-icon">
+                            <i class="fas fa-equals" style="color: #d8d8d8;"></i>
+                        </div>
+                        <div class="result-column">
+                            <h6>Annual Tax Income</h6>
+                            <h4 id="annualTax">-</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Form -->
+        <form name="calculatorForm">
+            <div class="nav-bar-container">
+                <div class="form-card">
+                    <div style="padding: 16px;">
+                        <div style="width: 100%; height: 100%;">
+                            <h4 style="font-size: 20px; margin: 10px 0px;">Personal Income Tax</h4>
+
+                            <table class="form-table">
+                                <tr>
+                                    <td class="form-input-name">Monthly Salary</td>
+                                    <td>
+                                        <div class="form-input-group">
+                                            <div class="currency"> IDR </div>
+                                            <div style="height: 100%;">
+                                                <input id="monthlySalary" type="text">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-input-name">Martial Status</td>
+                                    <td>
+                                        <div class="form-input-group">
+                                            <div style="width: 100%; height: 100%;">
+                                                <select id="martialStatuses" name="martialStatuses" style="text-align-last: center;">
+                                                    <option value="" disabled selected> -- Please select -- </option>
+                                                    <option value="TK0">Single</option>
+                                                    <option value="K0">Married with no dependant</option>
+                                                    <option value="K1">Married with 1 dependant</option>
+                                                    <option value="K2">Married with 2 dependants</option>
+                                                    <option value="K3">Married with 3 dependants</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Main -->
+    <script type="module" src="incomeTaxCalculator.js"></script>
+</body>
+</html>

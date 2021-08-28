@@ -1,0 +1,97 @@
+body {
+    width: 100%;
+    height: 100%;
+    color: #4d4d4d;
+    font-family: Cabin,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Nav Bar */
+.nav-bar {
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.nav-bar-container {
+    margin-left: 75px;
+    margin-right: 75px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.divider {
+    margin: 10px 0px;
+    border-top: 1px solid #bbbbbb;
+}
+
+/* Result */
+.result-column {
+    flex: 1;
+}
+
+.arithmetic-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Form */
+.form-card {
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.06);
+}
+
+.form-table {
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+}
+
+.form-table td:nth-child(1) {
+    width: 100%;
+}
+
+.form-table td:nth-child(2) {
+    float: right;
+}
+
+.form-input-group {
+    height: 40px;
+    min-width: 188px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+
+.form-input-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.currency {
+    display: flex;
+    padding: 0 4px;
+    align-items: center;
+    border: 1px solid #cccccc;
+    background-color: #e5e5e5;
+    border-radius: 4px 0px 0px 4px;
+    height: -webkit-fill-available;
+}
+
+#monthlySalary, #martialStatuses {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 0px 4px 4px 0px;
+}
